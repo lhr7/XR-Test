@@ -181,5 +181,11 @@ function render() {
 	renderer.render( scene, camera );
 }
 
-AR();
+var button = document.createElement( 'button' );
+button.id = 'ArButton'
+button.textContent = 'ENTER AR' ;
+button.style.cssText+= `position: absolute;top:80%;left:40%;width:20%;height:2rem;`;
+    
+document.body.appendChild(button)
+document.getElementById('ArButton').addEventListener('click',x=>AR())
 
